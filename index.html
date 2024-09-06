@@ -52,38 +52,41 @@ layout: main
             {% if card.timelined %}
             <div class="timeline-diamond"></div>
             {% endif %}
-            <div class="card">
-                <div class="card-header">
-                    <div class="timeline-arrow"></div>
-                    <h1>{{ card.title }}</h1>
-                </div>
-                {% if card.secondaryTitle != "" %}
-                <h3>{{ card.secondaryTitle }}</h3>
-                {% endif %}
-                {% if card.content != "" %}
-                <p>{{ card.content }}</p>
-                {% endif %}
-                <div class="card-tags">
-                    <div class="card-tag-section">
-                    {% for tag in card.stat %}
-                        <div class="card-tag" style="background-color: #A0D9EF;">
-                            <p>{{ tag }}</p>
-                        </div>
-                    {% endfor %}
+            <div class="card-cont">
+                <p class="timeline-card-dates">{{ card.startYear | append: " - " | append: card.endYear}}</p>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="timeline-arrow"></div>
+                        <h1>{{ card.title }}</h1>
                     </div>
-                    <div class="card-tag-section">
-                        {% for tag in card.award %}
-                        <div class="card-tag" style="background-color: #FF7E83;">
-                            <p>{{ tag }}</p>
+                    {% if card.secondaryTitle != "" %}
+                    <h3>{{ card.secondaryTitle }}</h3>
+                    {% endif %}
+                    {% if card.content != "" %}
+                    <p>{{ card.content }}</p>
+                    {% endif %}
+                    <div class="card-tags">
+                        <div class="card-tag-section">
+                            {% for tag in card.stat %}
+                            <div class="card-tag" style="background-color: #A0D9EF;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
-                    </div>
-                    <div class="card-tag-section">
-                        {% for tag in card.course %}
-                        <div class="card-tag" style="background-color: #DA70D6;">
-                            <p>{{ tag }}</p>
+                        <div class="card-tag-section">
+                            {% for tag in card.award %}
+                            <div class="card-tag" style="background-color: #FF7E83;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
+                        <div class="card-tag-section">
+                            {% for tag in card.course %}
+                            <div class="card-tag" style="background-color: #DA70D6;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>

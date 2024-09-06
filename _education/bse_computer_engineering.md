@@ -6,7 +6,7 @@ startYear: 2022
 endYear: 2026
 
 stat:
-- "Cumulative GPA: 4.43"
+- "Cumulative GPA: 3.43"
 - "Major GPA: 3.73"
 course:
 - "Data Structures & Algorithms"
