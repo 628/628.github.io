@@ -26,12 +26,19 @@
 .card-tags .card-tag {
   width: fit-content;
   border-radius: 10px;
+  margin-bottom: 7px;
+  margin-right: 7px;
 }
 .card-tags .card-tag p {
   padding: 3px 6px;
   font-size: 13px;
   font-weight: 600;
   color: #0F172A;
+}
+.card-tags .card-tag-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
 }
 
 .timeline-arrow {
@@ -231,17 +238,16 @@ section {
 
 .timeline {
   background: #915EFF;
-  background: linear-gradient(0deg, #0F172A 0%, #915EFF 100%);
+  background: linear-gradient(0deg, #0F172A 0%, #915EFF 150px, #915EFF calc(100% - 75px), #0F172A 100%);
   width: 6px;
   margin-top: 5px;
-  border-radius: 10px 10px 0 0;
 }
 
 .card-container {
   margin-bottom: 50px;
 }
 .card-container:first {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 .card-container:last-child {
   margin-bottom: 20px;

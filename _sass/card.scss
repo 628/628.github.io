@@ -32,12 +32,21 @@
         width: fit-content;
         border-radius: 10px;
 
+        margin-bottom: 7px;
+        margin-right: 7px;
+
         p {
             padding: 3px 6px;
             font-size: 13px;
             font-weight: 600;
             color: $bg;
         }
+    }
+
+    .card-tag-section {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 450px;
     }
 }
 
