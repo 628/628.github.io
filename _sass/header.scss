@@ -1,0 +1,60 @@
+@import "vars";
+
+#header {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  margin-top: 65px;
+
+  h1 {
+    font-size: 64px;
+    font-family: "input-mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-family: "input-mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+  }
+
+  #header-timeline {
+    background: $accent;
+    background: linear-gradient(0deg, $bg 0%, $accent 100%);
+    width: 6px;
+    margin-top: 5px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #blurb {
+    font-family: "open-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 750px;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  #links>* {
+    text-decoration: none;
+    color: $p-text;
+    margin-right: 30px;
+    font-size: 30px;
+    transition: $th-transition;
+  }
+
+  #links>*:hover {
+    color: $accent;
+  }
+
+  #content {
+    padding-bottom: 15px;
+  }
+}
