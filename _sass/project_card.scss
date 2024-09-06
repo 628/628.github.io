@@ -3,6 +3,7 @@
 $img-percent: 20%;
 $content-padding: 20px;
 $project-card-width: 250px;
+$project-card-height: 400px;
 
 #project-card-container {
     margin-left: 50px;
@@ -14,8 +15,14 @@ $project-card-width: 250px;
 }
 
 .project-content {
-    height: fit-content;
+    height: 100%;
     justify-self: left;
+    margin-bottom: 10px;
+
+    .card-tags {
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 .project-card {
@@ -30,6 +37,7 @@ $project-card-width: 250px;
     padding-right: $content-padding;
     padding-left: $content-padding;
     width: $project-card-width;
+    height: $project-card-height;
     transition: $th-transition;
 
     h1 {
@@ -52,5 +60,5 @@ $project-card-width: 250px;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
