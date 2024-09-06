@@ -4,6 +4,8 @@ title: "Sandro Petrovski" # the name of your site, e.g. ACME Corp.
 collections:
  education:
   sort_by: startYear
+ projects:
+  sort_by: year
 
 highlighter: rouge
 kramdown:

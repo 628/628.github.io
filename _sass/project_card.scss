@@ -1,0 +1,56 @@
+@import "vars";
+
+$img-percent: 20%;
+$content-padding: 20px;
+$project-card-width: 250px;
+
+#project-card-container {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-content {
+    height: fit-content;
+    justify-self: left;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: calc($project-card-width - $img-percent) 45px 1fr;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: start;
+    font-family: "open-sans", sans-serif;
+    background: color-mix(in srgb, $accent, transparent 80%);
+    border-radius: 7px;
+    padding-right: $content-padding;
+    padding-left: $content-padding;
+    width: $project-card-width;
+    transition: $th-transition;
+
+    h1 {
+        font-size: 25px;
+        margin: 0;
+        justify-self: left;
+    }
+
+    p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 15px;
+        max-width: 500px;
+    }
+
+    img {
+        width: calc($project-card-width - $img-percent);
+        height: auto;
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}

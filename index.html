@@ -107,4 +107,38 @@ layout: main
     <div class="section-header"><img src="assets/bulb.png" />
         <h1>Projects</h1>
     </div>
+
+    <div class="timeline-sec">
+        <div class="timeline"></div>
+        <div id="project-card-container">
+            {% for card in site.projects %}
+            <div class="project-card">
+                <img src="assets/{{ card.image }}.png">
+                <h1>{{ card.name }}</h1>
+                <div class="project-content">
+                    {{ card.content }}
+                    <div class="card-tags">
+                        <div class="card-tag-section">
+                            {% for tag in card.langs %}
+                            <div class="card-tag" style="background-color: #A0D9EF;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                            {% for tag in card.tools %}
+                            <div class="card-tag" style="background-color: #A0D9EF;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                            {% for tag in card.platforms %}
+                            <div class="card-tag" style="background-color: #A0D9EF;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>

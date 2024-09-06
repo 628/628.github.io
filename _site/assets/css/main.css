@@ -4,6 +4,7 @@
   border-radius: 5px;
   padding: 10px;
   width: fit-content;
+  max-width: 450px;
 }
 .card h1 {
   font-size: 32px;
@@ -17,7 +18,7 @@
 .card p {
   margin: 0;
   font-size: 15px;
-  max-width: 700px;
+  max-width: 450px;
 }
 
 .card-tags {
@@ -229,6 +230,54 @@
   height: 60px;
   justify-self: center;
   align-self: center;
+}
+
+#project-card-container {
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-content {
+  height: fit-content;
+  justify-self: left;
+}
+
+.project-card {
+  display: grid;
+  grid-template-rows: calc(250px - 20%) 45px 1fr;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: start;
+  font-family: "open-sans", sans-serif;
+  background: color-mix(in srgb, #915EFF, transparent 80%);
+  border-radius: 7px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 250px;
+  transition: 0.3s;
+}
+.project-card h1 {
+  font-size: 25px;
+  margin: 0;
+  justify-self: left;
+}
+.project-card p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 15px;
+  max-width: 500px;
+}
+.project-card img {
+  width: calc(250px - 20%);
+  height: auto;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
 }
 
 :root {

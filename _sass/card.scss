@@ -6,6 +6,7 @@
     border-radius: 5px;
     padding: 10px;
     width: fit-content;
+    max-width: $max-card-width;
 
     h1 {
         font-size: 32px;
@@ -21,7 +22,7 @@
     p {
         margin: 0;
         font-size: 15px;
-        max-width: 700px;
+        max-width: $max-card-width;
     }
 }
 
@@ -46,7 +47,7 @@
     .card-tag-section {
         display: flex;
         flex-wrap: wrap;
-        max-width: 450px;
+        max-width: $max-card-width;
     }
 }
 
