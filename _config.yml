@@ -5,7 +5,7 @@ collections:
  education:
   sort_by: endYear
  projects:
-  sort_by: year
+  sort_by: sort
  experience:
   sort_by: endYear
 

@@ -1,6 +1,6 @@
 ---
 name: Nixie Tube Clock
-year: 2024
+sort: 100
 image: nixie
 
 langs:
