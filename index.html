@@ -47,7 +47,8 @@ layout: main
     <div class="timeline-sec">
         <div class="timeline"></div>
         <div id="project-card-container">
-            {% for card in site.projects reversed %}
+            {% assign projects = site.projects | sort:"year" %}
+            {% for card in projects reversed %}
             <a href="{{ card.link }}" target="_blank">
                 <div class="project-card">
                     <img src="assets/{{ card.image }}.png">
@@ -90,7 +91,8 @@ layout: main
     <div class="timeline-sec">
         <div class="timeline"></div>
         <div class="timeline-card-container">
-            {% for card in site.experience reversed %}
+            {% assign experience = site.experience | sort:"endYear" %}
+            {% for card in experience reversed %}
             <div class="timeline-diamond"></div>
             <div class="card-cont">
                 {% if card.summer %}
@@ -150,7 +152,8 @@ layout: main
     <div class="timeline-sec">
         <div class="timeline"></div>
         <div class="timeline-card-container">
-            {% for card in site.education reversed %}
+            {% assign education = site.education | sort:"endYear" %}
+            {% for card in education reversed %}
             {% if card.timelined %}
             <div class="timeline-diamond"></div>
             {% endif %}

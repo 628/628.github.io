@@ -1,6 +1,6 @@
 ---
 name: Nixie Tube Clock
-sort: 100
+year: 100
 image: nixie
 
 langs:

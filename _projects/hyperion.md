@@ -1,6 +1,6 @@
 ---
 name: Hyperion
-sort: 60
+year: 60
 image: hyperion
 link: https://gitlab.com/628/hyperion
 

@@ -1,6 +1,6 @@
 ---
 name: Maize-Made Arcade
-sort: 90
+year: 90
 image: mma
 link: https://github.com/taupau/maize-made-arcade
 

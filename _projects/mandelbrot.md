@@ -1,6 +1,6 @@
 ---
 name: Fractal Visualizer
-sort: 50
+year: 50
 image: mandelbrot
 link: https://gitlab.com/628/mandelbrot-generator
 
