@@ -1,12 +1,24 @@
 @import "vars";
 
-$img-percent: 20%;
+$img-percent: 25%;
 $content-padding: 20px;
-$project-card-width: 250px;
+$project-card-width: 275px;
 $project-card-height: 400px;
+$project-preview-height: 185px;
+$project-preview-width: 275px;
 
 #project-card-container {
     margin-left: 50px;
+
+    @media only screen and (max-width: 500px) {
+        margin-left: 25px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        margin-left: 0;
+        justify-content: center;
+    }
+
     margin-top: 30px;
     margin-bottom: 40px;
     display: flex;
@@ -17,7 +29,7 @@ $project-card-height: 400px;
 .project-content {
     height: 100%;
     justify-self: left;
-    margin-bottom: 10px;
+    position: relative;
 
     .card-tags {
         position: absolute;
@@ -27,23 +39,29 @@ $project-card-height: 400px;
 
 .project-card {
     display: grid;
-    grid-template-rows: calc($project-card-width - $img-percent) 45px 1fr;
+    grid-template-rows: calc($project-card-width - $img-percent) 55px 1fr;
     grid-template-columns: 100%;
     justify-items: center;
     align-items: start;
     font-family: "open-sans", sans-serif;
     background: color-mix(in srgb, $accent, transparent 80%);
     border-radius: 7px;
-    padding-right: $content-padding;
-    padding-left: $content-padding;
+    padding: $content-padding $content-padding 5px $content-padding;
     width: $project-card-width;
     height: $project-card-height;
     transition: $th-transition;
 
+    @media only screen and (max-width: 360px) {
+        width: $project-card-width - 20px;
+    }
+
     h1 {
         font-size: 25px;
         margin: 0;
+        padding-top: 10px;
         justify-self: left;
+        align-self: center;
+        text-wrap: nowrap;
     }
 
     p {
@@ -54,8 +72,9 @@ $project-card-height: 400px;
     }
 
     img {
-        width: calc($project-card-width - $img-percent);
-        height: auto;
+        width: $project-preview-width;
+        height: $project-preview-height;
+        align-self: center;
     }
 }
 

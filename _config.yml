@@ -3,9 +3,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Sandro Petrovski" # the name of your site, e.g. ACME Corp.
 collections:
  education:
-  sort_by: startYear
+  sort_by: endYear
  projects:
   sort_by: year
+ experience:
+  sort_by: endYear
 
 highlighter: rouge
 kramdown:

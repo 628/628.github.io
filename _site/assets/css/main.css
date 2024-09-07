@@ -4,7 +4,7 @@
   border-radius: 5px;
   padding: 10px;
   width: fit-content;
-  max-width: 450px;
+  max-width: 600px;
 }
 .card h1 {
   font-size: 32px;
@@ -18,7 +18,7 @@
 .card p {
   margin: 0;
   font-size: 15px;
-  max-width: 450px;
+  max-width: 600px;
 }
 
 .card-tags {
@@ -39,7 +39,7 @@
 .card-tags .card-tag-section {
   display: flex;
   flex-wrap: wrap;
-  max-width: 450px;
+  max-width: 600px;
 }
 
 .timeline-arrow {
@@ -51,13 +51,27 @@
   border-radius: 1px;
   justify-self: right;
   margin-right: 10px;
+  margin-top: 12px;
+  align-self: start;
+}
+@media only screen and (max-width: 400px) {
+  .timeline-arrow {
+    display: none;
+  }
 }
 
 .card-header {
   display: grid;
   grid-template-columns: 20px 1fr;
   align-items: center;
+  position: relative;
   transform: translateX(-20px);
+}
+@media only screen and (max-width: 400px) {
+  .card-header {
+    grid-template-columns: 1fr;
+    transform: none;
+  }
 }
 
 .timeline-diamond {
@@ -68,10 +82,25 @@
   border-radius: 2px;
   transform: translateX(-20px) translateY(15px) rotate(45deg);
 }
+@media only screen and (max-width: 400px) {
+  .timeline-diamond {
+    display: none;
+  }
+}
 
 .timeline-card-container {
   display: grid;
   grid-template-columns: 50px 1fr;
+}
+@media only screen and (max-width: 400px) {
+  .timeline-card-container {
+    display: block;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .timeline-card-container {
+    grid-template-columns: 40px 1fr;
+  }
 }
 .timeline-card-container .card {
   margin-bottom: 60px;
@@ -98,8 +127,13 @@
 
 #header {
   display: grid;
-  grid-template-columns: 25px 1fr;
+  grid-template-columns: 50px 1fr;
   margin-top: 65px;
+}
+@media only screen and (max-width: 500px) {
+  #header {
+    grid-template-columns: 25px 1fr;
+  }
 }
 #header h1 {
   font-size: 64px;
@@ -108,12 +142,32 @@
   font-style: normal;
   margin: 0;
 }
+@media only screen and (max-width: 500px) {
+  #header h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #header h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #header h1 {
+    font-size: 40px;
+  }
+}
 #header h3 {
   font-size: 18px;
   font-family: "input-mono", monospace;
   font-weight: 400;
   font-style: italic;
   margin: 0;
+}
+@media only screen and (max-width: 360px) {
+  #header h3 {
+    font-size: 18px;
+  }
 }
 #header #header-timeline {
   background: #915EFF;
@@ -128,10 +182,15 @@
   font-style: normal;
   font-size: 20px;
   padding-bottom: 10px;
-  width: 750px;
+  max-width: 750px;
 }
 #header #blurb span {
   color: #915EFF;
+}
+@media only screen and (max-width: 360px) {
+  #header #blurb {
+    font-size: 18px;
+  }
 }
 #header #links > * {
   text-decoration: none;
@@ -158,11 +217,21 @@
   justify-content: left;
   grid-template-columns: 50% 50%;
 }
+@media only screen and (max-width: 1600px) {
+  #nav {
+    padding: 10px 100px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #nav {
+    padding: 10px 40px;
+  }
+}
 #nav #links {
-  display: inline-grid;
-  grid-template-rows: 100%;
-  grid-template-columns: auto auto auto auto;
-  justify-items: right;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  justify-content: right;
   align-items: center;
 }
 #nav .nav-link {
@@ -176,6 +245,11 @@
   text-decoration: none;
   text-align: left;
   transition: 0.3s;
+}
+@media only screen and (max-width: 1000px) {
+  #nav .nav-link {
+    display: none;
+  }
 }
 #nav #nav-logo {
   display: grid;
@@ -205,25 +279,42 @@
   color: #0F172A;
   background: #915EFF;
   border-radius: 10px;
-  padding: 3px 6px;
+  padding: 4px 7px;
   transition: 0.3s;
+  display: inline;
 }
 #nav #resume:hover {
   background: #FFF;
 }
 
 .section-header {
-  display: grid;
-  grid-template-columns: 80px 1fr;
+  display: flex;
+  gap: 15px;
   align-items: center;
   transform: translateX(-38px);
   margin-top: 50px;
   margin-bottom: 25px;
 }
+@media only screen and (max-width: 400px) {
+  .section-header {
+    transform: none;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .section-header {
+    grid-template-columns: 50px 1fr;
+    margin-bottom: 0;
+  }
+}
 .section-header h1 {
   font-family: "input-mono", monospace;
   margin: 0;
   font-size: 40px;
+}
+@media only screen and (max-width: 360px) {
+  .section-header h1 {
+    font-size: 30px;
+  }
 }
 .section-header img {
   width: 60px;
@@ -240,11 +331,22 @@
   gap: 30px;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 500px) {
+  #project-card-container {
+    margin-left: 25px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #project-card-container {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
 
 .project-content {
   height: 100%;
   justify-self: left;
-  margin-bottom: 10px;
+  position: relative;
 }
 .project-content .card-tags {
   position: absolute;
@@ -253,23 +355,30 @@
 
 .project-card {
   display: grid;
-  grid-template-rows: calc(250px - 20%) 45px 1fr;
+  grid-template-rows: calc(275px - 25%) 55px 1fr;
   grid-template-columns: 100%;
   justify-items: center;
   align-items: start;
   font-family: "open-sans", sans-serif;
   background: color-mix(in srgb, #915EFF, transparent 80%);
   border-radius: 7px;
-  padding-right: 20px;
-  padding-left: 20px;
-  width: 250px;
+  padding: 20px 20px 5px 20px;
+  width: 275px;
   height: 400px;
   transition: 0.3s;
+}
+@media only screen and (max-width: 360px) {
+  .project-card {
+    width: 255px;
+  }
 }
 .project-card h1 {
   font-size: 25px;
   margin: 0;
+  padding-top: 10px;
   justify-self: left;
+  align-self: center;
+  text-wrap: nowrap;
 }
 .project-card p {
   margin: 0;
@@ -278,8 +387,9 @@
   max-width: 500px;
 }
 .project-card img {
-  width: calc(250px - 20%);
-  height: auto;
+  width: 275px;
+  height: 185px;
+  align-self: center;
 }
 
 .project-card:hover {
@@ -303,12 +413,35 @@ section {
   padding-right: 250px;
   padding-left: 250px;
 }
+@media only screen and (max-width: 1600px) {
+  section {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
 
 .timeline {
   background: #915EFF;
   background: linear-gradient(0deg, #0F172A 0%, #915EFF 150px, #915EFF calc(100% - 75px), #0F172A 100%);
   width: 6px;
   margin-top: 5px;
+}
+@media only screen and (max-width: 400px) {
+  .timeline {
+    display: none;
+  }
 }
 
 .card-container {
@@ -324,6 +457,11 @@ section {
 .timeline-sec {
   display: grid;
   grid-template-columns: 6px 1fr;
+}
+@media only screen and (max-width: 400px) {
+  .timeline-sec {
+    grid-template-columns: 100%;
+  }
 }
 
 a {

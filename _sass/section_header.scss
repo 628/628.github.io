@@ -1,17 +1,30 @@
 @import "vars";
 
 .section-header {
-  display: grid;
-  grid-template-columns: 80px 1fr;
+  display: flex;
+  gap: 15px;
   align-items: center;
   transform: translateX(-38px);
   margin-top: 50px;
   margin-bottom: 25px;
 
+  @media only screen and (max-width: 400px) {
+    transform: none;
+  }
+
+  @media only screen and (max-width: 360px) {
+    grid-template-columns: 50px 1fr;
+    margin-bottom: 0;
+  }
+
   h1 {
     font-family: "input-mono", monospace;
     margin: 0;
     font-size: 40px;
+
+    @media only screen and (max-width: 360px) {
+      font-size: 30px;
+    }
   }
 
   img {
