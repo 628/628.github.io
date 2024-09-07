@@ -1,6 +1,5 @@
 @import "vars";
 
-$img-percent: 25%;
 $content-padding: 20px;
 $project-card-width: 275px;
 $project-card-height: 400px;
@@ -39,7 +38,7 @@ $project-preview-width: 275px;
 
 .project-card {
     display: grid;
-    grid-template-rows: calc($project-card-width - $img-percent) 55px 1fr;
+    grid-template-rows: $project-preview-height 55px 1fr;
     grid-template-columns: 100%;
     justify-items: center;
     align-items: start;

@@ -355,7 +355,7 @@
 
 .project-card {
   display: grid;
-  grid-template-rows: calc(275px - 25%) 55px 1fr;
+  grid-template-rows: 185px 55px 1fr;
   grid-template-columns: 100%;
   justify-items: center;
   align-items: start;
