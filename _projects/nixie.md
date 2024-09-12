@@ -2,7 +2,7 @@
 name: Nixie Tube Clock
 year: 100
 image: nixie
-link: #
+link: https://github.com/taupau/nixie
 
 langs:
 - C++
